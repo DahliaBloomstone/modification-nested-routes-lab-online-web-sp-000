@@ -26,7 +26,7 @@ class SongsController < ApplicationController
 
 #edited
 # GET new sets artist when nested route
-# validates artist when nested route 
+# validates artist when nested route
   def new
   if params[:artist_id] && !Artist.exists?(params[:artist_id])
      redirect_to artists_path, alert: "Artist not found."
@@ -45,7 +45,7 @@ class SongsController < ApplicationController
     end
   end
 
-#edited
+#edited validates artist when nested/song 
   def edit
       if params[:artist_id]
        artist=Artist.find_by(id: params[:artist_id])
