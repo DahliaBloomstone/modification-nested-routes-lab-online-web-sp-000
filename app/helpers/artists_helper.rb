@@ -21,3 +21,7 @@ module ArtistsHelper
 
 
 end
+
+#responds to display_artist with 2 argument
+#displays a link to editt song if artist empty
+#link to artist page if not empty 
