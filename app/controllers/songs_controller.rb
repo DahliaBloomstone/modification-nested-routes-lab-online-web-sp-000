@@ -1,4 +1,6 @@
 class SongsController < ApplicationController
+
+#redirects when artist not found 
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
@@ -45,7 +47,7 @@ class SongsController < ApplicationController
     end
   end
 
-#edited validates artist when nested/song 
+#edited validates artist when nested/song
   def edit
       if params[:artist_id]
        artist=Artist.find_by(id: params[:artist_id])
